@@ -41,4 +41,9 @@ public class Geometry3D {
     public static float tetrahedronVolume(float sideLength) {
         return ((float) Math.pow(sideLength, 3)) / (6 * (float) Math.sqrt(2));
     }
+
+    // Calculate the surface area of a tetrahedron
+    public static float tetrahedronArea(float sideLength) {
+        return (float) Math.sqrt(3) * (float) Math.pow(sideLength, 2);
+    }
 }
