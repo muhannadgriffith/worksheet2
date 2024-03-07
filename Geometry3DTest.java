@@ -48,15 +48,33 @@ public class Geometry3DTest {
         double expected = 170.6;
         double actual = Geometry3D.squaredPyramidVolume(8.0f, 8.0f);
         assertEquals(expected, actual, EPSILON);
-        
+
         // Test case 2
         expected = 16.0;
         actual = Geometry3D.squaredPyramidVolume(4.0f, 3.0f);
         assertEquals(expected, actual, EPSILON);
-        
+
         // Test case 3
         expected = 4.0;
         actual = Geometry3D.squaredPyramidVolume(2.0f, 3.0f);
+        assertEquals(expected, actual, EPSILON);
+    }
+
+    @Test
+    public void testSquaredPyramidArea() {
+        // Test case 1
+        float expected = 66.5f;
+        float actual = Geometry3D.squaredPyramidArea(4.0f, 6.0f);
+        assertEquals(expected, actual, EPSILON);
+
+        // Test case 2
+        expected = 99.3f;
+        actual = Geometry3D.squaredPyramidArea(5.0f, 7.0f);
+        assertEquals(expected, actual, EPSILON);
+
+        // Test case 3
+        expected = 16.6f;
+        actual = Geometry3D.squaredPyramidArea(2.0f, 3.0f);
         assertEquals(expected, actual, EPSILON);
     }
 }
