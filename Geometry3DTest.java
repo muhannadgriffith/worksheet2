@@ -41,4 +41,22 @@ public class Geometry3DTest {
         actual = Geometry3D.cuboidSurface(4.0f, 5.0f, 11.0f);
         assertEquals(expected, actual, EPSILON);
     }
+
+    @Test
+    public void testSquaredPyramidVolume() {
+        // Test case 1
+        double expected = 170.6;
+        double actual = Geometry3D.squaredPyramidVolume(8.0f, 8.0f);
+        assertEquals(expected, actual, EPSILON);
+        
+        // Test case 2
+        expected = 16.0;
+        actual = Geometry3D.squaredPyramidVolume(4.0f, 3.0f);
+        assertEquals(expected, actual, EPSILON);
+        
+        // Test case 3
+        expected = 4.0;
+        actual = Geometry3D.squaredPyramidVolume(2.0f, 3.0f);
+        assertEquals(expected, actual, EPSILON);
+    }
 }
