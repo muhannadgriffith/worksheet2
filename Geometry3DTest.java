@@ -77,4 +77,22 @@ public class Geometry3DTest {
         actual = Geometry3D.squaredPyramidArea(2.0f, 3.0f);
         assertEquals(expected, actual, EPSILON);
     }
+
+    @Test
+    public void testTetrahedronVolume() {
+        // Test case 1
+        float expected = 14.7f;
+        float actual = Geometry3D.tetrahedronVolume(5.0f);
+        assertEquals(expected, actual, EPSILON);
+
+        // Test case 2
+        expected = 0.9f;
+        actual = Geometry3D.tetrahedronVolume(2.0f);
+        assertEquals(expected, actual, EPSILON);
+
+        // Test case 3
+        expected = 7.5f;
+        actual = Geometry3D.tetrahedronVolume(4.0f);
+        assertEquals(expected, actual, EPSILON);
+    }
 }

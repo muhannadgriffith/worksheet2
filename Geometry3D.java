@@ -29,11 +29,16 @@ public class Geometry3D {
     }
 
     // Calculate the surface area of a squared pyramid
-    public static float squaredPyramidArea(float baseLength, float height){
+    public static float squaredPyramidArea(float baseLength, float height) {
         float baseArea = baseLength * baseLength;
         float heightArea = height * height;
         float slantHeight = (float) Math.sqrt(baseArea + 4 * heightArea);
         float lateralArea = baseLength * slantHeight;
         return baseArea + lateralArea;
+    }
+
+    // Calculate the volume of a tetrahedron
+    public static float tetrahedronVolume(float sideLength) {
+        return ((float) Math.pow(sideLength, 3)) / (6 * (float) Math.sqrt(2));
     }
 }
