@@ -23,4 +23,22 @@ public class Geometry3DTest {
         assertEquals(expected, actual, EPSILON);
     }
 
+    @Test
+    void testCuboidSurface() {
+
+        // Test case one
+        float expected = 52.0f;
+        float actual = Geometry3D.cuboidSurface(2.0f, 3.0f, 4.0f);
+        assertEquals(expected, actual, EPSILON);
+
+        // Test case 2
+        expected = 214.0f;
+        actual = Geometry3D.cuboidSurface(5.0f, 6.0f, 7.0f);
+        assertEquals(expected, actual, EPSILON);
+
+        // Test case 3
+        expected = 238.0f;
+        actual = Geometry3D.cuboidSurface(4.0f, 5.0f, 11.0f);
+        assertEquals(expected, actual, EPSILON);
+    }
 }
